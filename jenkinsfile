@@ -18,7 +18,7 @@ pipeline {
     stages {
         stage('Git-Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/Akshathabm786/weekend-spring-petclinic.git'
+                git branch: 'main', url: 'https://github.com/Arpithashetty06/spring-petclinic-fork.git'
             }
         }
         stage('Build-package') {
@@ -31,7 +31,7 @@ pipeline {
     post {
     success {
         mail (
-            to: 'akshatha.1si20et003@gmail.com',
+            to: 'Shettyarpithasg@gmail.com',
             cc: '',
             subject: "SUCCESS: ${APP_NAME}",
             body: """
@@ -50,7 +50,7 @@ pipeline {
     }
 failure {
     mail (
-        to: 'akshatha.1si20et003@gmail.com',
+        to: 'Shettyarpithasg@gmail.com',
             cc: '',
             subject: "FAILED: ${APP_NAME}",
             body: """
